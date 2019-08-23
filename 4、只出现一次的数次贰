@@ -1,0 +1,15 @@
+示例 1:
+    输入: [2,2,3,2]
+    输出: 3
+    
+    示例 2:
+    输入: [0,1,0,1,0,1,99]
+    输出: 99
+    The first way:
+       规律法：
+       去重后数字的三倍减去原数组和再除以2即为所求数字
+       class Solution:
+           def singleNumber(self, nums: List[int]) -> int:
+               return (sum(set(nums))*3 - sum(nums)) // 2
+    The second way:
+       位运算：
